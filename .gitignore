@@ -7,9 +7,16 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Build output
 dist
 dist-ssr
+frontend/dist
+backend/dist
 *.local
 
 # Editor directories and files
@@ -25,12 +32,27 @@ dist-ssr
 
 # Vite cache
 .vite/
+frontend/.vite/
+backend/.vite/
 
 # Environment files
 .env
 .env.*
+frontend/.env
+frontend/.env.*
+backend/.env
+backend/.env.*
 
 # Temporary files
 *.tmp
 *.temp
 *~
+
+# OS files
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# IDE
+*.swp
+*.swo
