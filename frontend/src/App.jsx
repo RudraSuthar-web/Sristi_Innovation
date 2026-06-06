@@ -3,6 +3,8 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import SristiHeroSlider from './components/ui/SristiHeroSlider';
 import AboutUsSection from './components/landing/AboutUsSection';
+import WhatWeOfferSection from './components/landing/WhatWeOfferSection';
+import PromotionalBanners from './components/landing/PromotionalBanners';
 import AboutUs from './pages/AboutUs';
 import WhatWeOffer from './pages/WhatWeOffer';
 
@@ -11,6 +13,8 @@ const Home = () => (
   <div>
     <SristiHeroSlider />
     <AboutUsSection />
+    <WhatWeOfferSection />
+    <PromotionalBanners />
   </div>
 );
 const Incubator = () => <div className="min-h-[70vh] flex items-center justify-center text-4xl font-bold text-gray-800">Incubator Page</div>;
