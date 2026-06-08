@@ -11,6 +11,8 @@ import WhatWeOffer from './pages/WhatWeOffer';
 import OurStartups from './pages/OurStartups';
 import Incubator from './pages/Incubator';
 import Contact from './pages/Contact';
+import MarketAccess from './pages/MarketAccess';
+
 // Placeholder Pages for Task 1
 const Home = () => (
   <div>
@@ -37,7 +39,9 @@ function App() {
             <Route path="/incubator" element={<Incubator />} />
             <Route path="/our-startups" element={<OurStartups />} />
             <Route path="/startups" element={<OurStartups />} />
+            
             <Route path="/contact" element={<Contact />} />
+            <Route path="/market-access" element={<MarketAccess />} />
           </Routes>
         </main>
 
