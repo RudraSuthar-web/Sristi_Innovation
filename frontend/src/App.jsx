@@ -5,6 +5,7 @@ import SristiHeroSlider from './components/ui/SristiHeroSlider';
 import AboutUsSection from './components/landing/AboutUsSection';
 import WhatWeOfferSection from './components/landing/WhatWeOfferSection';
 import PromotionalBanners from './components/landing/PromotionalBanners';
+import OurStartupsSection from './components/landing/OurStartupsSection';
 import AboutUs from './pages/AboutUs';
 import WhatWeOffer from './pages/WhatWeOffer';
 import OurStartups from './pages/OurStartups';
@@ -17,6 +18,7 @@ const Home = () => (
     <AboutUsSection />
     <WhatWeOfferSection />
     <PromotionalBanners />
+    <OurStartupsSection />
   </div>
 );
 
