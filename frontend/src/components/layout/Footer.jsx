@@ -18,14 +18,7 @@ const Footer = () => {
         
         {/* Massive Brand Statement (Ultra-Modern Touch) */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-24 gap-12 border-b border-gray-800/60 pb-16">
-           <div className="max-w-4xl">
-             <h2 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight mb-6">
-               Empowering <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-200">Grassroots</span><br/> Innovation.
-             </h2>
-             <p className="text-xl text-gray-500 font-light max-w-2xl leading-relaxed">
-               Protecting intellectual property and building a resilient, sustainable future through community-driven technological advancement.
-             </p>
-           </div>
+          
            
            <Link to="/" className="group relative block shrink-0">
              <div className="absolute inset-0 bg-emerald-500/20 rounded-[2rem] blur-xl group-hover:bg-emerald-500/30 transition-all duration-500"></div>
@@ -37,6 +30,15 @@ const Footer = () => {
                />
              </div>
            </Link>
+
+            <div className="max-w-2xl">
+             <h2 className="text-4xl md:text-4xl font-extrabold text-white tracking-tight leading-tight mb-6">
+               Empowering <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-200">Grassroots</span><br/> Innovation.
+             </h2>
+             <p className="text-lg text-gray-500 font-light max-w-xl leading-relaxed">
+               Protecting intellectual property and building a resilient, sustainable future through community-driven technological advancement.
+             </p>
+           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-12 mb-20">
@@ -96,19 +98,25 @@ const Footer = () => {
               Locations
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="bg-gray-900/50 border border-gray-800 p-6 rounded-3xl hover:border-emerald-500/30 transition-colors duration-300 relative group overflow-hidden">
-                   <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                      <MapPin size={48} className="text-emerald-400" />
+                <div className="bg-gray-900/50 border border-gray-800 p-4 rounded-3xl hover:border-emerald-500/30 transition-colors duration-300 relative group overflow-hidden">
+                   <a href="https://www.google.com/maps/place/SRISTI/data=!4m7!3m6!1s0x395e84f53fffffff:0x29386d81d5488a17!8m2!3d23.0407679!4d72.5455422!16s%2Fg%2F1tdyjm79!19sChIJ____P_WEXjkRF4pI1YFtOCk?authuser=0&hl=en&rclk=1" target="_blank" rel="noreferrer" className="absolute inset-0 z-20">
+                   <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-200 transition-opacity">
+                      <MapPin size={28} className="text-emerald-400" />
                    </div>
+                   </a>
                    <span className="inline-block px-3 py-1 bg-gray-800 text-gray-300 text-xs font-bold rounded-full mb-4 tracking-wider uppercase border border-gray-700">Office</span>
                    <p className="text-sm text-gray-400 leading-relaxed relative z-10">
                      AES Boys Hostel Campus, Nr. Gujarat University Library, Navrangpura, Ahmedabad - 380009
                    </p>
                 </div>
-                <div className="bg-gray-900/50 border border-gray-800 p-6 rounded-3xl hover:border-emerald-500/30 transition-colors duration-300 relative group overflow-hidden">
-                   <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                      <MapPin size={48} className="text-emerald-400" />
+                
+                <div className="bg-gray-900/50 border border-gray-800 p-4 rounded-3xl hover:border-emerald-500/30 transition-colors duration-300 relative group overflow-hidden">
+                   <a href="https://maps.app.goo.gl/qR2xq68kPJqQ3jVG7" target="_blank" rel="noreferrer" className="absolute inset-0 z-20">
+                  
+                   <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-200 transition-opacity">
+                      <MapPin size={28} className="text-emerald-400" />
                    </div>
+                    </a>
                    <span className="inline-block px-3 py-1 bg-gray-800 text-gray-300 text-xs font-bold rounded-full mb-4 tracking-wider uppercase border border-gray-700">Incubation</span>
                    <p className="text-sm text-gray-400 leading-relaxed relative z-10">
                      SRISTI Innovations, Grambharti Campus, Gandhinagar-Mahudi Rd, Gujarat - 382650
