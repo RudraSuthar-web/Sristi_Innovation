@@ -12,6 +12,8 @@ import OurStartups from './pages/OurStartups';
 import Incubator from './pages/Incubator';
 import Contact from './pages/Contact';
 import MarketAccess from './pages/MarketAccess';
+import Magazines from './pages/publications/Magazines';
+import Books from './pages/publications/Books';
 
 // Placeholder Pages for Task 1
 const Home = () => (
@@ -42,6 +44,8 @@ function App() {
             
             <Route path="/contact" element={<Contact />} />
             <Route path="/market-access" element={<MarketAccess />} />
+            <Route path="/publications/magazines" element={<Magazines />} />
+            <Route path="/publications/books" element={<Books />} />
           </Routes>
         </main>
 
