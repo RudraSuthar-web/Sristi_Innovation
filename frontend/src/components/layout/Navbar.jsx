@@ -8,7 +8,7 @@ const navItems = [
   { name: 'About us', path: '/about' },
   { name: 'What We Offer', path: '/what-we-offer' },
   { name: 'Our Startups', path: '/our-startups' },
-  { name: 'Products & Technology', path: '/products' },
+  { name: 'Products', path: '/products-technology' }, // Updated to match App.jsx path perfectly
   {
     name: 'Publications',
     isDropdown: true,
@@ -178,7 +178,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Drawer Body (Links) */}
+        {/* Drawer Drawer Body (Links) */}
         <div className="flex-1 overflow-y-auto px-6 py-8 custom-scrollbar">
           <div className="flex flex-col space-y-7">
             {navItems.map((item) => {

@@ -25,6 +25,10 @@ import Incubatees from './pages/Incubatees';
 import Resources from './pages/Resources';
 import GrowthMeet from './pages/GrowthMeet';
 
+// Imported Products and Technology Page
+import ProductsAndTechnology from './pages/ProductsAndTechnology';
+import ProductDetail from './pages/ProductDetail';
+
 // Placeholder Pages for Task 1
 const Home = () => (
   <div>
@@ -47,11 +51,15 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
-             <Route path="/what-we-offer" element={<WhatWeOffer />} />
-            <Route path="/" element={<Home />} />
+            <Route path="/what-we-offer" element={<WhatWeOffer />} />
             <Route path="/incubator" element={<Incubator />} />
             <Route path="/our-startups" element={<OurStartups />} />
             <Route path="/startups" element={<OurStartups />} />
+            
+            {/* Products and Technology Route Registration */}
+            <Route path="/products-technology" element={<ProductsAndTechnology />} />
+            <Route path="/products-technology/:id" element={<ProductDetail />} />
+
             <Route path="/publications/magazines" element={<Magazines />} />
             <Route path="/publications/books" element={<Books />} />
             <Route path="/contact" element={<Contact />} />
