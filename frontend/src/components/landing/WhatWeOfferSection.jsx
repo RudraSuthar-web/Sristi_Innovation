@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const linkMap = {
   "Internship Program": "/what-we-offer#internship",
-  "Sattvik": "/sattvik",
+  "Sattvik": "https://sattvik.sristi.org/",
   "Khedut Haat": "/khedut-haat",
   "Advisory and Mentoring": "/what-we-offer#advisory",
   "Funding Support": "/what-we-offer#funding",
