@@ -1,8 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const linkMap = {
-  "Internship Program": "/what-we-offer#internship",
+  "Internship Program": "/inquiry",
   "Sattvik": "https://sattvik.sristi.org/",
   "Khedut Haat": "/khedut-haat",
   "Advisory and Mentoring": "/what-we-offer#advisory",

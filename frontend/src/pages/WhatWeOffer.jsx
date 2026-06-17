@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Users, HandCoins, Wrench, ShieldCheck, Building2, 
   Mail, Phone, Info, FileText, Megaphone, CheckCircle, 
-  Leaf, Award, ArrowRight, Sparkles 
+  Leaf, Award, ArrowRight
 } from 'lucide-react';
 
 import labImage1 from "../assets/Sristi-Labs_about us.jpg";
@@ -104,6 +104,7 @@ const PROGRAMS = [
     title: "Internship Program",
     icon: Users,
     description: "Nurturing grassroots and student-led innovations through hands-on national internship initiatives.",
+    link: "/inquiry",
     points: [
       "Immersive technical learning & problem solving.",
       "Direct access to SRISTI mentors & industry experts."
@@ -198,6 +199,18 @@ const OfferingCard = ({ item }) => {
                 </li>
               ))}
             </ul>
+          </div>
+        )}
+
+        {item.link && (
+          <div className="mt-6 pt-4 border-t border-gray-100/60 flex">
+            <Link
+              to={item.link}
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#82b440] hover:bg-[#729e37] text-white font-bold text-xs rounded-xl shadow-md transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+            >
+              Inquire Now
+              <ArrowRight size={14} />
+            </Link>
           </div>
         )}
       </div>
