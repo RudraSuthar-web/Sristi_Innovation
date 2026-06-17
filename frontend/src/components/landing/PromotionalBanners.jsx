@@ -60,7 +60,7 @@ const PromotionalBanners = () => {
   return (
     <section className="w-full flex flex-col gap-8 my-16">
       <Banner 
-        text="SRISTI’s Khedut Haat (Every Thursday and Sunday) - 6 AM to 10 AM" 
+        text="SRISTI’s Khedut Haat (Every Thursday and Sunday) - 7 AM to 10 AM" 
         bgImage={khedutImg}
         contactUrl="/contact"
         readMoreUrl="/khedut-haat"
