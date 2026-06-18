@@ -220,7 +220,7 @@ const MAGAZINES = [
     category: "Honeybee",
     date: "January 1, 2020",
     datetime: "2020-01-01",
-    coverImage: "/assets/magazine_covers/pub_Childhood_unchained_book_with_bleed-001.jpg",
+    coverImage: "/assets/magazine_covers/pub_Childhood_unchained_book_with_bleed-001.png",
     pdfLink: "/sristi_pdf/all_pdf/Publication/English/Childhood unchained book with bleed.pdf",
     excerpt: "A special SRISTI publication on grassroots creativity, traditional knowledge, and ecological solutions. Published in English.",
   },
