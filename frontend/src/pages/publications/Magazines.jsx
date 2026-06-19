@@ -158,41 +158,41 @@ const MAGAZINES = [
   {
     id: 16,
     title: "Suzbuz Magazine - Suzbuz_24 (1_2) January_June_2020",
-    category: "Suzbuz (Hindi)",
+    category: "Suzbuz",
     date: "January 1, 2020",
     datetime: "2020-01-01",
     coverImage: "/assets/magazine_covers/web_Suzbuz_24__1_2__January_June_2020-01.jpg",
-    pdfLink: "/sristi_pdf/all_pdf/website/Suzbuz (Hindi)/Suzbuz_24 (1_2) January_June_2020.pdf",
+    pdfLink: "/sristi_pdf/all_pdf/website/Suzbuz/Suzbuz_24 (1_2) January_June_2020.pdf",
     excerpt: "हिंदी में जमीनी नवप्रवर्तकों, पारंपरिक ज्ञान और रचनात्मक दृढ़ता की कहानियाँ — सुज़बुज़ पत्रिका।",
   },
   {
     id: 17,
     title: "Suzbuz Magazine - Suzbuz_24(3_4) July_December_2020",
-    category: "Suzbuz (Hindi)",
+    category: "Suzbuz",
     date: "January 1, 2020",
     datetime: "2020-01-01",
     coverImage: "/assets/magazine_covers/web_Suzbuz_24_3_4__July_December_2020-01.jpg",
-    pdfLink: "/sristi_pdf/all_pdf/website/Suzbuz (Hindi)/Suzbuz_24(3_4) July_December_2020.pdf",
+    pdfLink: "/sristi_pdf/all_pdf/website/Suzbuz/Suzbuz_24(3_4) July_December_2020.pdf",
     excerpt: "हिंदी में जमीनी नवप्रवर्तकों, पारंपरिक ज्ञान और रचनात्मक दृढ़ता की कहानियाँ — सुज़बुज़ पत्रिका।",
   },
   {
     id: 18,
     title: "Suzbuz Magazine - Suzbuz_25(1_2) January_June_2021",
-    category: "Suzbuz (Hindi)",
+    category: "Suzbuz",
     date: "January 1, 2021",
     datetime: "2021-01-01",
     coverImage: "/assets/magazine_covers/web_Suzbuz_25_1_2__January_June_2021-01.jpg",
-    pdfLink: "/sristi_pdf/all_pdf/website/Suzbuz (Hindi)/Suzbuz_25(1_2) January_June_2021.pdf",
+    pdfLink: "/sristi_pdf/all_pdf/website/Suzbuz/Suzbuz_25(1_2) January_June_2021.pdf",
     excerpt: "हिंदी में जमीनी नवप्रवर्तकों, पारंपरिक ज्ञान और रचनात्मक दृढ़ता की कहानियाँ — सुज़बुज़ पत्रिका।",
   },
   {
     id: 19,
     title: "Suzbuz Magazine - Suzbuz_25(3_4) July_December_2021",
-    category: "Suzbuz (Hindi)",
+    category: "Suzbuz",
     date: "January 1, 2021",
     datetime: "2021-01-01",
     coverImage: "/assets/magazine_covers/web_Suzbuz_25_3_4__July_December_2021-01.jpg",
-    pdfLink: "/sristi_pdf/all_pdf/website/Suzbuz (Hindi)/Suzbuz_25(3_4) July_December_2021.pdf",
+    pdfLink: "/sristi_pdf/all_pdf/website/Suzbuz/Suzbuz_25(3_4) July_December_2021.pdf",
     excerpt: "हिंदी में जमीनी नवप्रवर्तकों, पारंपरिक ज्ञान और रचनात्मक दृढ़ता की कहानियाँ — सुज़बुज़ पत्रिका।",
   },
   {
@@ -528,13 +528,13 @@ const MAGAZINES = [
 ];
 
 // All unique categories (from original site filter tabs)
-const CATEGORIES = ['View All', 'Honeybee', 'Loksarvani', 'Suzbuz (Hindi)'];
+const CATEGORIES = ['View All', 'Honeybee', 'Loksarvani', 'Suzbuz'];
 
 // ─── Category badge colour map ───────────────────────────────────────────────
 const CATEGORY_COLORS = {
   Honeybee:        'bg-amber-100 text-amber-800 border border-amber-200',
   Loksarvani:      'bg-emerald-100 text-emerald-800 border border-emerald-200',
-  'Suzbuz (Hindi)': 'bg-orange-100 text-orange-800 border border-orange-200',
+  'Suzbuz': 'bg-orange-100 text-orange-800 border border-orange-200',
 };
 
 // ─── Framer-motion variants ──────────────────────────────────────────────────
@@ -674,7 +674,7 @@ const Magazines = () => {
             transition={{ duration: 0.55, delay: 0.2 }}
             className="max-w-2xl mx-auto mt-6 text-emerald-100/80 text-lg leading-relaxed"
           >
-            Explore SRISTI's Honeybee, Loksarvani, and Suzbuz (Hindi) magazine publications — stories of grassroots
+            Explore SRISTI's Honeybee, Loksarvani, and Suzbuz magazine publications — stories of grassroots
             innovators, traditional knowledge, and creative persistence.
           </motion.p>
 
