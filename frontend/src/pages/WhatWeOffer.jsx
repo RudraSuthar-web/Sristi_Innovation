@@ -1,15 +1,22 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Users, HandCoins, Wrench, ShieldCheck, Building2, 
   Mail, Phone, Info, FileText, Megaphone, CheckCircle, 
-  Leaf, Award, ArrowRight
+  Leaf, Award, ArrowRight, Search
 } from 'lucide-react';
 
 import labImage1 from "../assets/Sristi-Labs_about us.jpg";
 import labImage2 from "../assets/SIIE-Sristi-Innovations2_aboutus.jpg";
 import forestAsset from "../assets/forest.jpeg";
+
+import biosafetyCabinetImg from "../assets/instruments/biosafety_cabinet.png";
+import co2IncubatorImg from "../assets/instruments/co2_incubator.png";
+import deepFreezerImg from "../assets/instruments/deep_freezer.png";
+import hplcSystemImg from "../assets/instruments/hplc_system.png";
+import hptlcSystemImg from "../assets/instruments/hptlc_system.png";
+import invertedMicroscopeImg from "../assets/instruments/inverted_microscope.png";
 
 // Data arrays organized by section
 const SERVICES = [
@@ -132,6 +139,145 @@ const PROGRAMS = [
   }
 ];
 
+const KEY_INSTRUMENTS = [
+  {
+    id: "cabinet",
+    name: "Biosafety Cabinet",
+    image: biosafetyCabinetImg,
+    category: "Microbiology & Cell Culture",
+    description: "Provides a sterile work environment for handling biological samples safely, minimizing contamination risks.",
+    rates: {
+      academia: "₹150 / hour OR ₹3,000 / month",
+      industry: "₹300 / hour OR ₹6,000 / month"
+    },
+    remarks: ""
+  },
+  {
+    id: "co2-incubator",
+    name: "CO2 Incubator",
+    image: co2IncubatorImg,
+    category: "Cell Culture",
+    description: "Maintains optimal temperature, humidity, and CO2 levels for biological cultivation and cell growth.",
+    rates: {
+      academia: "₹4,000 / tray / month OR ₹200 / tray / day",
+      industry: "₹4,000 / tray / month OR ₹200 / tray / day"
+    },
+    remarks: ""
+  },
+  {
+    id: "deep-freezer",
+    name: "Deep Freezer (-80°C)",
+    image: deepFreezerImg,
+    category: "Storage & Preservation",
+    description: "Ultra-low temperature storage to preserve biological samples, enzymes, and sensitive compounds.",
+    rates: {
+      academia: "₹2,000 / month / tray OR ₹100 / month / box of 100 tubes (2mL)",
+      industry: "₹4,000 / month / tray OR ₹200 / month / box of 100 tubes (2mL)"
+    },
+    remarks: ""
+  },
+  {
+    id: "hplc",
+    name: "HPLC System",
+    image: hplcSystemImg,
+    category: "Analytical Chemistry",
+    description: "High-Performance Liquid Chromatography for separating, identifying, and quantifying components in a mixture.",
+    rates: {
+      academia: "₹1,000 / sample (Assay) | ₹800 / sample (>20 samples)",
+      industry: "₹2,000 / sample"
+    },
+    remarks: "More than 20 injections"
+  },
+  {
+    id: "hptlc",
+    name: "HPTLC System",
+    image: hptlcSystemImg,
+    category: "Phytochemistry",
+    description: "High-Performance Thin-Layer Chromatography for sophisticated botanical and chemical profiling with photo documentation.",
+    rates: {
+      academia: "₹2,000 / sample (1-10 samples) | ₹1,500 / sample (11-50 samples)",
+      industry: "₹5,000 / sample (1-10 samples) | ₹3,000 / sample (11-50 samples)"
+    },
+    remarks: "Fee structure based on sample batch sizes."
+  },
+  {
+    id: "microscope",
+    name: "Inverted Phase Microscope",
+    image: invertedMicroscopeImg,
+    category: "Microscopy",
+    description: "Advanced imaging for cell cultures in flasks, petri dishes, and multi-well plates with high clarity.",
+    rates: {
+      academia: "₹250 / slot / hour",
+      industry: "₹500 / slot / hour"
+    },
+    remarks: ""
+  }
+];
+
+const RENTAL_CHARGES = [
+  { srNo: 1, instrument: "Biosafety Cabinet", academia: "150/hr OR 3000/month", industry: "300/hr or 6000/month", remarks: "" },
+  { srNo: 2, instrument: "CO2 Incubator", academia: "4000/tray/month OR 200/tray/day", industry: "4000/tray/month OR 200/tray/day", remarks: "" },
+  { srNo: 3, instrument: "Orbital shakers", academia: "100/flask clamp/day", industry: "200/flask clamp/day", remarks: "" },
+  { srNo: 4, instrument: "Deep freezer (-80C)", academia: "2000/month/tray OR 100/month/box of 2mLx100tubes", industry: "4000/month/tray OR 200/month/box of 2mLx100tubes", remarks: "" },
+  { srNo: 5, instrument: "Invert phase microscope", academia: "250/slot/hr", industry: "500/slot/hr", remarks: "" },
+  { srNo: 6, instrument: "Centrifuge", academia: "250/hr", industry: "500/hr", remarks: "" },
+  { srNo: 7, instrument: "HPLC", academia: "Rs 1000/- per sample (Assay) Rs 800/- per sample(>20)", industry: "Rs 2000/-", remarks: "More than 20 injections" },
+  { srNo: 8, instrument: "HPTLC System with Photo Documentation", academia: "Rs 2000 per sample Fee for 11 – 50 samples: Rs 1500 per sample", industry: "Rs 5000 per sample, Fee for 11 –50 samples: Rs 3000 per sample", remarks: "Fee for 1–10 samples:" },
+  { srNo: 9, instrument: "ELISA Reader", academia: "50/plate/reading", industry: "200/plate/reading", remarks: "" },
+  { srNo: 10, instrument: "Spectrophotometer", academia: "100/hr", industry: "200/hr", remarks: "" },
+  { srNo: 11, instrument: "Cooling centrifuge", academia: "500/hr", industry: "1000/hr", remarks: "" }
+];
+
+const OTHER_EQUIPMENTS = [
+  { srNo: 1, name: "LAF", manufacturer: "" },
+  { srNo: 2, name: "Rotary shaker(37°C) with stabilizer", manufacturer: "Thermo Scientific" },
+  { srNo: 3, name: "Rotary shaker(28°C) with stabilizer", manufacturer: "Thermo Scientific" },
+  { srNo: 4, name: "BOD incubator", manufacturer: "Four Tech" },
+  { srNo: 5, name: "BOD incubator(37°C)", manufacturer: "Nova" },
+  { srNo: 6, name: "BOD incubator(28°C)", manufacturer: "Nova" },
+  { srNo: 7, name: "Orbital incubator", manufacturer: "Thermo Tech" },
+  { srNo: 8, name: "Refrigerator", manufacturer: "L.G" },
+  { srNo: 9, name: "Spectrophotometer", manufacturer: "Genesys 10uv" },
+  { srNo: 10, name: "BSL 2", manufacturer: "Thermo" },
+  { srNo: 11, name: "ELISA washer", manufacturer: "Biotech" },
+  { srNo: 12, name: "Gel doc", manufacturer: "Syngene" },
+  { srNo: 13, name: "Homogenizer", manufacturer: "Omni" },
+  { srNo: 14, name: "fermenter", manufacturer: "Nova" },
+  { srNo: 15, name: "CO2 incubator", manufacturer: "Thermo Scientific" },
+  { srNo: 16, name: "Cell counter", manufacturer: "Nexelcom" },
+  { srNo: 17, name: "HPTLC", manufacturer: "Camag" },
+  { srNo: 18, name: "-20 REFIGERATOR", manufacturer: "Remi" },
+  { srNo: 19, name: "Gas chromatography", manufacturer: "Perkinelmer" },
+  { srNo: 20, name: "HPLC", manufacturer: "Water 2998" },
+  { srNo: 21, name: "AAS with PC", manufacturer: "Elico" },
+  { srNo: 22, name: "Lyophilizer", manufacturer: "Scanvac" },
+  { srNo: 23, name: "Thermo centrifuge with stabilizer", manufacturer: "Thermo" },
+  { srNo: 24, name: "Centrifuge", manufacturer: "Remi" },
+  { srNo: 25, name: "Centrifuge", manufacturer: "Remi" },
+  { srNo: 26, name: "Rota evaporator with vacuum pump", manufacturer: "Halnshin" },
+  { srNo: 27, name: "Rota evaporator(in gas)", manufacturer: "Rvo" },
+  { srNo: 28, name: "Rota evaporator", manufacturer: "" },
+  { srNo: 29, name: "Weighing machine", manufacturer: "LWL Precision Instruments" },
+  { srNo: 30, name: "Weighing machine", manufacturer: "Scout Pro" },
+  { srNo: 31, name: "pH meter", manufacturer: "Well Tronix" },
+  { srNo: 32, name: "Distillation unit", manufacturer: "" },
+  { srNo: 33, name: "Vortex", manufacturer: "Remi" },
+  { srNo: 34, name: "Magnetic stirrer(3)", manufacturer: "Remi" },
+  { srNo: 35, name: "Hot plate", manufacturer: "Lab Line" },
+  { srNo: 36, name: "Soxhlet assembly (3)", manufacturer: "" },
+  { srNo: 37, name: "Spectrophotometer", manufacturer: "Genesys 10uv" },
+  { srNo: 38, name: "Photoflurometer", manufacturer: "Systronic" },
+  { srNo: 39, name: "Digital turbidity meter", manufacturer: "M.Tronic" },
+  { srNo: 40, name: "Heating panel UNIT", manufacturer: "" },
+  { srNo: 41, name: "Oil extractor machine", manufacturer: "" },
+  { srNo: 42, name: "Steam distillation unit", manufacturer: "" },
+  { srNo: 43, name: "Water bath", manufacturer: "Meta" },
+  { srNo: 44, name: "Autoclave", manufacturer: "" },
+  { srNo: 45, name: "Muffle furnace", manufacturer: "Shivaki" },
+  { srNo: 46, name: "Hot air oven (two)", manufacturer: "LAB HOSP AND SEDKO(Working)" },
+  { srNo: 47, name: "Cold storage", manufacturer: "Blue star" }
+];
+
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
@@ -220,6 +366,8 @@ const OfferingCard = ({ item }) => {
 
 const WhatWeOffer = () => {
   const location = useLocation();
+  const [activeTab, setActiveTab] = useState("rental");
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     if (location.hash) {
@@ -232,6 +380,15 @@ const WhatWeOffer = () => {
       }, 300);
     }
   }, [location]);
+
+  const filteredRental = RENTAL_CHARGES.filter(item => 
+    item.instrument.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const filteredOther = OTHER_EQUIPMENTS.filter(item => 
+    item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.manufacturer.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div className="bg-[#f8fafc] text-gray-700 min-h-screen relative overflow-hidden font-sans">
@@ -417,6 +574,174 @@ const WhatWeOffer = () => {
               </motion.div>
             </div>
           </motion.div>
+        </section>
+
+        {/* Equipments & Laboratory Rates Showcase Section */}
+        <section id="equipments-showcase">
+          <SectionHeader 
+            title="Equipments' Rental Charges" 
+            subtitle="We provide access to high-end laboratory instruments on a rental basis. Select key analytical and cell culture systems are featured below." 
+          />
+          
+          <motion.div 
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {KEY_INSTRUMENTS.map((inst) => (
+              <motion.div
+                key={inst.id}
+                className="bg-white rounded-[2.5rem] border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-[0_20px_40px_rgba(16,185,129,0.06)] hover:border-emerald-100 group relative"
+                whileHover={{ y: -6 }}
+              >
+                <div>
+                  <div className="h-60 overflow-hidden relative">
+                    <img
+                      src={inst.image}
+                      alt={inst.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute top-4 left-4 bg-emerald-600/90 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full border border-emerald-500/20">
+                      {inst.category}
+                    </div>
+                  </div>
+                  
+                  <div className="p-6 md:p-8 space-y-4">
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-emerald-700 transition-colors">
+                      {inst.name}
+                    </h3>
+                    <p className="text-gray-500 text-sm leading-relaxed">
+                      {inst.description}
+                    </p>
+                    
+                    <div className="pt-4 border-t border-gray-100 space-y-3">
+                      <div className="flex justify-between items-center text-xs md:text-sm">
+                        <span className="text-gray-400 font-medium">Academia Rate:</span>
+                        <span className="font-bold text-emerald-600 text-right">{inst.rates.academia}</span>
+                      </div>
+                      <div className="flex justify-between items-center text-xs md:text-sm">
+                        <span className="text-gray-400 font-medium">Industry Rate:</span>
+                        <span className="font-bold text-gray-700 text-right">{inst.rates.industry}</span>
+                      </div>
+                      {inst.remarks && (
+                        <div className="text-xs text-gray-400 italic mt-1.5 flex gap-1 items-start">
+                          <Info size={14} className="text-emerald-500 flex-shrink-0 mt-0.5" />
+                          <span>Remarks: {inst.remarks}</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </section>
+
+        {/* Searchable Directory Section */}
+        <section className="bg-white border border-gray-150 rounded-[2.5rem] p-8 md:p-12 shadow-sm space-y-8" id="equipments-list">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900">Complete Equipment Directory</h3>
+              <p className="text-gray-500 text-sm mt-1">Search rates and specifications for all available instruments.</p>
+            </div>
+            
+            {/* Search Input */}
+            <div className="relative w-full md:w-80">
+              <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-gray-400">
+                <Search size={18} />
+              </span>
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search instruments..."
+                className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-gray-700"
+              />
+            </div>
+          </div>
+
+          {/* Tabs header */}
+          <div className="flex border-b border-gray-100">
+            <button
+              onClick={() => setActiveTab("rental")}
+              className={`pb-4 px-6 font-bold text-sm transition-all relative ${
+                activeTab === "rental" 
+                  ? "text-emerald-600 border-b-2 border-emerald-500" 
+                  : "text-gray-400 hover:text-gray-600"
+              }`}
+            >
+              Equipment Rental Rates
+            </button>
+            <button
+              onClick={() => setActiveTab("other")}
+              className={`pb-4 px-6 font-bold text-sm transition-all relative ${
+                activeTab === "other" 
+                  ? "text-emerald-600 border-b-2 border-emerald-500" 
+                  : "text-gray-400 hover:text-gray-600"
+              }`}
+            >
+              Other Laboratory Equipments
+            </button>
+          </div>
+
+          {/* Active Tab Content */}
+          <div className="overflow-x-auto">
+            {activeTab === "rental" ? (
+              <table className="w-full text-left border-collapse min-w-[700px]">
+                <thead>
+                  <tr className="border-b border-gray-200 text-xs font-bold text-gray-400 uppercase tracking-wider">
+                    <th className="py-4 px-4 w-16">Sr. No.</th>
+                    <th className="py-4 px-6 w-1/3">Instrument</th>
+                    <th className="py-4 px-6">Academia Rate (INR)</th>
+                    <th className="py-4 px-6">Industry Rate (INR)</th>
+                    <th className="py-4 px-6">Remarks</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100 text-sm text-gray-600">
+                  {filteredRental.map((row) => (
+                    <tr key={row.srNo} className="hover:bg-gray-50/50 transition-colors">
+                      <td className="py-4 px-4 font-semibold text-gray-400">{row.srNo}</td>
+                      <td className="py-4 px-6 font-bold text-gray-900">{row.instrument}</td>
+                      <td className="py-4 px-6 text-emerald-600 font-semibold">{row.academia}</td>
+                      <td className="py-4 px-6 text-gray-700 font-medium">{row.industry}</td>
+                      <td className="py-4 px-6 text-gray-400 text-xs italic">{row.remarks || "-"}</td>
+                    </tr>
+                  ))}
+                  {filteredRental.length === 0 && (
+                    <tr>
+                      <td colSpan={5} className="py-8 text-center text-gray-400">No instruments match your search.</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            ) : (
+              <table className="w-full text-left border-collapse min-w-[600px]">
+                <thead>
+                  <tr className="border-b border-gray-200 text-xs font-bold text-gray-400 uppercase tracking-wider">
+                    <th className="py-4 px-4 w-16">Sr. No.</th>
+                    <th className="py-4 px-6 w-1/2">Name of the Instrument</th>
+                    <th className="py-4 px-6">Manufacturer</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100 text-sm text-gray-600">
+                  {filteredOther.map((row) => (
+                    <tr key={row.srNo} className="hover:bg-gray-50/50 transition-colors">
+                      <td className="py-4 px-4 font-semibold text-gray-400">{row.srNo}</td>
+                      <td className="py-4 px-6 font-bold text-gray-900">{row.name}</td>
+                      <td className="py-4 px-6 text-gray-600 font-medium">{row.manufacturer || "-"}</td>
+                    </tr>
+                  ))}
+                  {filteredOther.length === 0 && (
+                    <tr>
+                      <td colSpan={3} className="py-8 text-center text-gray-400">No instruments match your search.</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            )}
+          </div>
         </section>
 
       </div>
