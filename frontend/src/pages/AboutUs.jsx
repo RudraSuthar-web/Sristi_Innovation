@@ -1,4 +1,3 @@
-import React from 'react';
 import { Target, Lightbulb } from 'lucide-react';
 
 import aboutUsImg from '../assets/SIIE-Sristi-Innovations2_aboutus.jpg';
@@ -34,7 +33,7 @@ const AboutUs = () => {
         
         {/* About Us General Text + Image */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
-          <div className="w-full lg:w-3/5 space-y-8 text-gray-700 text-lg leading-loose">
+          <div className="w-full lg:w-3/5 space-y-8 text-gray-700 text-lg leading-loose text-justify">
             <p>
               SRISTI Innovations–BIRAC’s BioNEST is a business incubator funded by the Biotechnology Industry Research Assistance Council (BIRAC), Department of Biotechnology, Government of India. It provides a nurturing environment for innovations emerging from out-of-the-box thinking, traditional knowledge systems, grassroots creativity, and the ingenuity of university students and even children, supporting them through product development and commercialization.
             </p>
@@ -77,7 +76,7 @@ const AboutUs = () => {
                   Objectives of SIIE-SRISTI Innovations
                 </h2>
               </div>
-              <div className="text-gray-700 text-lg leading-loose">
+              <div className="text-gray-700 text-lg leading-loose text-justify">
                 <p>
                   To serve as a sanctuary of knowledge for marginalized communities—representing not marginal minds but extraordinary innovators who have developed breakthrough solutions to everyday challenges—and to complement their efforts with inclusive innovations emerging from the formal sector.
                 </p>
@@ -107,7 +106,7 @@ const AboutUs = () => {
                   Mission of SRISTI Innovations
                 </h2>
               </div>
-              <div className="text-gray-700 text-lg leading-loose space-y-6">
+              <div className="text-gray-700 text-lg leading-loose space-y-6 text-justify">
                 <p>
                   SRISTI Innovations is committed to promoting technology- and innovation-driven start-ups by providing comprehensive incubation support through virtual (in situ and ex situ) as well as physical incubation models. The in situ incubation model focuses on empowering grassroots innovators by supporting them at their own locations, enabling them to refine and scale their ideas within their local contexts.
                 </p>
