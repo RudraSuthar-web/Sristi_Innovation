@@ -4,7 +4,7 @@ import sristiLogo from '../../assets/Sristi-innovation-logo.jpg';
 import honeyBeeLogo from '../../assets/Honey-Bee-logo.jpg';
 import sristiPartnerLogo from '../../assets/sristi-logo.jpg';
 import biracLogo from '../../assets/birac-logo.jpg';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
@@ -135,10 +135,10 @@ const Footer = () => {
            <div className="lg:col-span-5 flex flex-col gap-6">
               <div className="flex gap-4">
                 {[
-                  { icon: FaFacebook, href: "#" },
-                  { icon: FaXTwitter, href: "#" },
+                  { icon: FaFacebook, href: "https://www.facebook.com/sristiahmedabad/" },
+                  { icon: FaXTwitter, href: "https://x.com/honeybee_report" },
                   { icon: FaInstagram, href: "https://www.instagram.com/prakrutikkheduthaat" },
-                  { icon: FaLinkedin, href: "#" }
+                  { icon: FaYoutube, href: "https://www.youtube.com/channel/UCKuK6WYFkfwEjWCIKxI8MZA" }
                 ].map((social, idx) => (
                   <a 
                     key={idx}

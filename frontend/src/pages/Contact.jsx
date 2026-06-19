@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { FaX, FaXTwitter } from 'react-icons/fa6';
 
 const Contact = () => {
@@ -219,10 +219,10 @@ const Contact = () => {
               <h4 className="font-bold text-gray-900 text-lg tracking-wider uppercase">Follow Us</h4>
               <div className="flex space-x-3">
                 {[
-                  { icon: FaFacebook, link: "#", color: "hover:bg-blue-600" },
-                  { icon: FaXTwitter, link: "#", color: "hover:bg-slate-800" },
+                  { icon: FaFacebook, link: "https://www.facebook.com/sristiahmedabad/", color: "hover:bg-blue-600" },
+                  { icon: FaXTwitter, link: "https://x.com/honeybee_report", color: "hover:bg-slate-800" },
                   { icon: FaInstagram, link: "https://www.instagram.com/prakrutikkheduthaat", color: "hover:bg-pink-600" },
-                  { icon: FaLinkedin, link: "#", color: "hover:bg-blue-700" }
+                  { icon: FaYoutube, link: "https://www.youtube.com/channel/UCKuK6WYFkfwEjWCIKxI8MZA", color: "hover:bg-red-700" }
                 ].map((social, idx) => {
                   const Icon = social.icon;
                   return (
