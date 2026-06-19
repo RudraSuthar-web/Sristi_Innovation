@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Download, Calendar, Tag, BookOpen } from 'lucide-react';
+import { getGoogleDriveLink } from '../../utils/googleDrivePdfLinks';
 
 // ─── Content extracted verbatim from https://sristiinnovations.com/magazines/ ───
 const MAGAZINES = [
@@ -597,7 +598,7 @@ const MagazineCard = ({ magazine }) => (
       {/* CTA */}
       <div className="mt-auto">
         <a
-          href={magazine.pdfLink}
+          href={getGoogleDriveLink(magazine.pdfLink) ?? magazine.pdfLink}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-6 py-2.5 bg-emerald-700 text-white text-sm font-bold rounded-full hover:bg-emerald-800 transition-all duration-300 shadow hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-emerald-500/40"

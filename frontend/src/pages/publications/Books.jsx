@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Download, BookMarked, Library, Tag } from 'lucide-react';
+import { getGoogleDriveLink } from '../../utils/googleDrivePdfLinks';
 
 // ─── Content extracted verbatim from https://sristiinnovations.com/books/ ────
 const BOOKS = [
@@ -10,9 +11,9 @@ const BOOKS = [
     language: 'Hindi',
     coverImage:
       'https://sristiinnovations.com/wp-content/uploads/2020/04/Ek-bel-ko-bhi-hai-Jine-ka-Adhikar-Hindi-1.bmp',
-    // PDF link available on original site
+    // PDF on Google Drive (mapped via local path key)
     pdfLink:
-      'https://sristiinnovations.com/wp-content/uploads/2020/04/Ek-bel-ko-bhi-hai-Jine-ka-Adhikar-Hindi.pdf',
+      '/sristi_pdf/all_pdf/Publication/Hindi/Ek bel ko bhi hai Jine ka Adhikar (HINID).pdf',
     available: true,
   },
   {
@@ -118,7 +119,7 @@ const BookCard = ({ book }) => (
       {/* CTA button */}
       {book.available && book.pdfLink ? (
         <a
-          href={book.pdfLink}
+          href={getGoogleDriveLink(book.pdfLink) ?? book.pdfLink}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 w-full px-5 py-2.5 bg-emerald-700 text-white text-sm font-bold rounded-xl hover:bg-emerald-800 transition-all duration-300 shadow hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-emerald-500/40"
