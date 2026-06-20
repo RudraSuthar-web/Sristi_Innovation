@@ -1,6 +1,37 @@
-// Auto-generated from Google Drive folder: https://drive.google.com/drive/folders/1DUOOxBuyYkrQI8owQe8RurP-jxTTpO7C?usp=sharing
-
-const PDF_DRIVE_LINKS = {
+{
+  "Africa Calling (Englsih).pdf": "https://drive.google.com/file/d/1KH2lFC8MQsZzzYSTnH6AJwr9ws6WsKVR/view?usp=sharing",
+  "Celebrating a Century- Profiles of Centenarians Englsih).pdf": "https://drive.google.com/file/d/14l-OuKPe48-c8KCT3Q7TvXNBPfnojp2G/view?usp=sharing",
+  "Childhood unchained book with bleed.pdf": "https://drive.google.com/file/d/19HBd7_TPuBk3vmcZmObHXn5K6UTS53ro/view?usp=sharing",
+  "Children_Creativity_Workshop_Book.pdf": "https://drive.google.com/file/d/1IVSd_AeyHhmO8xHMBipwCeYgGuDVTOqS/view?usp=sharing",
+  "Cornucopia of creativity 250 Practices  (Englsih).pdf": "https://drive.google.com/file/d/1vvnabxzW6XZ9pLsumrzCk3HWr9cqt7wa/view?usp=sharing",
+  "Creative voices from the Grassroots profile of innovators (English).pdf": "https://drive.google.com/file/d/1luIkg1aMsOe61xqPWGDf2BdTi61xEtKP/view?usp=sharing",
+  "Edible Art- A bite of creativity in Indian Cusine (Englsih).pdf": "https://drive.google.com/file/d/1G17cxhmCx09_XEi1Y8TitY_ENnBpt9nz/view?usp=sharing",
+  "Empathetic and inclusive Innovations at grassroots (LBSNAA_Book).pdf": "https://drive.google.com/file/d/1xatputbV36G_h34jFrUj-YyyW4Ed53Bb/view?usp=sharing",
+  "Grassroots innovation across the Himalaya (English).pdf": "https://drive.google.com/file/d/1BwBS2nJGYikDKHPmpZJLPkOwwSdRKd3s/view?usp=sharing",
+  "Honey Bee Newsletters Cover Stories (English).pdf": "https://drive.google.com/file/d/1npdS9KtBXsRV9g5OzBObIOmBmXHI-RH7/view?usp=sharing",
+  "Indigenous Common Property Resource Institution From Across the World (English).pdf": "https://drive.google.com/file/d/1J2qOPXzQpEfNCoEYrEkLuygpfTRBcim6/view?usp=sharing",
+  "Mapping Solutions (English).pdf": "https://drive.google.com/file/d/1LYI-rU3zAO2bmz_k18XF5INLzbovgtuW/view?usp=sharing",
+  "Policies for an Inclusive Innovation Ecosystem (English).pdf": "https://drive.google.com/file/d/1wcbIpPrK2cEGTBeH4f7CuvLYs9vT8UiK/view?usp=sharing",
+  "Shatayu book.pdf": "https://drive.google.com/file/d/1IyOySKHeq48ytAld-KC7XAfkeEnS1b2O/view?usp=sharing",
+  "Shodhyatra A pursuit of Authenticity.pdf": "https://drive.google.com/file/d/1b8GXDLTaGdSGjBQ395wvm8bdn4_FVouV/view?usp=sharing",
+  "Teachers as transformers.pdf": "https://drive.google.com/file/d/1pbA9p6W-kPuuS0_PkAxI2jBSO7Lpmljw/view?usp=sharing",
+  "The crucible of creativity English.pdf": "https://drive.google.com/file/d/1oZ7ENsp1XlxlVxPS2LxPMxUMuYi4b_JQ/view?usp=sharing",
+  "The Discerning Decades – HBN Editorial 1990-2012 English).pdf": "https://drive.google.com/file/d/1W6xSym4JWbreevRUuo5dZ83aceei19Io/view?usp=sharing",
+  "Bharat na Janita Buniyadi Kaushalyo Gujarati.pdf": "https://drive.google.com/file/d/1yntkgCoVqIBTELodeMo9Ia8ct9-nHkyQ/view?usp=sharing",
+  "Dhairyna  Hastakshar Gujarati).pdf": "https://drive.google.com/file/d/1r1LW9sl0jT7Wmu86qiyflcuN5xJrAMOw/view?usp=sharing",
+  "Jaivik pak sarakshan (Gujarati).pdf": "https://drive.google.com/file/d/15yC9ZOwRiKi6qqjYcA2T_FloTu5EF9WT/view?usp=sharing",
+  "Naisargik Pashu chikitsa (Gujarati).pdf": "https://drive.google.com/file/d/1k0qiMF-KsdL6DSfV-f9zIsM7vHUrRRBT/view?usp=sharing",
+  "Poshanmuly (Paramparagat Visrata Aahar Ane Dhanyonu Poshanmuly)_Final.pdf": "https://drive.google.com/file/d/10sq1eZS2Y5UBHLi1-KCbUhdYC2DQZ0DH/view?usp=sharing",
+  "Shatayu Vandana (Gujarati).pdf": "https://drive.google.com/file/d/1AN7Ax2FUp5970V6mpwwBVUnIGLhb20ad/view?usp=sharing",
+  "Taki Rahevano Purusharth (GUJ).pdf": "https://drive.google.com/file/d/1SUEr8wkr0TNPvRKTmeeQby67j18YwtnJ/view?usp=sharing",
+  "Vesarati Vangi no Khajano.pdf": "https://drive.google.com/file/d/1jSAO06coqlxc_SwgmdFIVXB-kS2h-vm5/view?usp=sharing",
+  "Bharat ke Buniyadi Kaushaly (Hindi).pdf": "https://drive.google.com/file/d/1wjNjJ2CdBpv57bzgGjx6dCLrQevCteBA/view?usp=sharing",
+  "Dhairy ke Hastakshar (Hindi).pdf": "https://drive.google.com/file/d/1OHRKQl1IRZHP_8lIvDk6qdu6JhrMU5Lp/view?usp=sharing",
+  "Ek bel ko bhi hai Jine ka Adhikar (HINID).pdf": "https://drive.google.com/file/d/13Y6CmGvaBDlwejIFSnH3klV3dS1UyLyw/view?usp=sharing",
+  "Fasal bina Jahar ki (Hindi).pdf": "https://drive.google.com/file/d/1D4r4QxBLKV4HUM2enZS30aQMTbHjEQ7B/view?usp=sharing",
+  "Naisargik Pashu chikitsa (Hindi).pdf": "https://drive.google.com/file/d/1pj9NCO6WgY0JYFSHh201M2RO6Bxzysmd/view?usp=sharing",
+  "Shatayu Vandana Hindi.pdf": "https://drive.google.com/file/d/1xzThb1KGieeN6e4pEbfutNVHmYNWgSlX/view?usp=sharing",
+  "Vyanjano ki Virasat (Hindi).pdf": "https://drive.google.com/file/d/1ifT-zsNaYFBEWLbp6on6gxP_3o5sXVhW/view?usp=sharing",
   "1(1)HBMAY90.pdf": "https://drive.google.com/file/d/1F6KMBbfmg74YLSaPnLp6P3Yg9UW9nTmk/view?usp=sharing",
   "10(1)HBJAN-MAR99.pdf": "https://drive.google.com/file/d/1T0n8Yo9laGHvaXEN_qxxBTV45kwkbMWA/view?usp=sharing",
   "10(2)HBJAPR-JUN99.pdf": "https://drive.google.com/file/d/19ibdeR3wqq9PppU49NbjQndc59a-hRkq/view?usp=sharing",
@@ -115,25 +146,7 @@ const PDF_DRIVE_LINKS = {
   "9(2)HBAPR-JUN98.pdf": "https://drive.google.com/file/d/11vQDDU7PJvfeueqGmR9TO2bIbTrXXk3b/view?usp=sharing",
   "9(3)HBJUL-SEP98.pdf": "https://drive.google.com/file/d/1mQNfKgEf-S0D72cAWsODgdya_R58Ltqw/view?usp=sharing",
   "9(4)HBOCT-DEC98.pdf": "https://drive.google.com/file/d/1tsba3tgMv4uFvaokX_NheRlk-CtONkaf/view?usp=sharing",
-  "Africa Calling (Englsih).pdf": "https://drive.google.com/file/d/1KH2lFC8MQsZzzYSTnH6AJwr9ws6WsKVR/view?usp=sharing",
-  "Bharat ke Buniyadi Kaushaly (Hindi).pdf": "https://drive.google.com/file/d/1wjNjJ2CdBpv57bzgGjx6dCLrQevCteBA/view?usp=sharing",
-  "Bharat na Janita Buniyadi Kaushalyo Gujarati.pdf": "https://drive.google.com/file/d/1yntkgCoVqIBTELodeMo9Ia8ct9-nHkyQ/view?usp=sharing",
-  "Celebrating a Century- Profiles of Centenarians Englsih).pdf": "https://drive.google.com/file/d/14l-OuKPe48-c8KCT3Q7TvXNBPfnojp2G/view?usp=sharing",
-  "Childhood unchained book with bleed.pdf": "https://drive.google.com/file/d/19HBd7_TPuBk3vmcZmObHXn5K6UTS53ro/view?usp=sharing",
-  "Children_Creativity_Workshop_Book.pdf": "https://drive.google.com/file/d/1IVSd_AeyHhmO8xHMBipwCeYgGuDVTOqS/view?usp=sharing",
-  "Cornucopia of creativity 250 Practices  (Englsih).pdf": "https://drive.google.com/file/d/1vvnabxzW6XZ9pLsumrzCk3HWr9cqt7wa/view?usp=sharing",
-  "Creative voices from the Grassroots profile of innovators (English).pdf": "https://drive.google.com/file/d/1luIkg1aMsOe61xqPWGDf2BdTi61xEtKP/view?usp=sharing",
-  "Dhairy ke Hastakshar (Hindi).pdf": "https://drive.google.com/file/d/1OHRKQl1IRZHP_8lIvDk6qdu6JhrMU5Lp/view?usp=sharing",
-  "Dhairyna  Hastakshar Gujarati).pdf": "https://drive.google.com/file/d/1r1LW9sl0jT7Wmu86qiyflcuN5xJrAMOw/view?usp=sharing",
-  "Edible Art- A bite of creativity in Indian Cusine (Englsih).pdf": "https://drive.google.com/file/d/1G17cxhmCx09_XEi1Y8TitY_ENnBpt9nz/view?usp=sharing",
-  "Ek bel ko bhi hai Jine ka Adhikar (HINID).pdf": "https://drive.google.com/file/d/13Y6CmGvaBDlwejIFSnH3klV3dS1UyLyw/view?usp=sharing",
-  "Empathetic and inclusive Innovations at grassroots (LBSNAA_Book).pdf": "https://drive.google.com/file/d/1xatputbV36G_h34jFrUj-YyyW4Ed53Bb/view?usp=sharing",
-  "Fasal bina Jahar ki (Hindi).pdf": "https://drive.google.com/file/d/1D4r4QxBLKV4HUM2enZS30aQMTbHjEQ7B/view?usp=sharing",
   "First Issue.pdf": "https://drive.google.com/file/d/1h4nAgOUnY8S9LaBqKbEVqi6gtHMX0REI/view?usp=sharing",
-  "Grassroots innovation across the Himalaya (English).pdf": "https://drive.google.com/file/d/1BwBS2nJGYikDKHPmpZJLPkOwwSdRKd3s/view?usp=sharing",
-  "Honey Bee Newsletters Cover Stories (English).pdf": "https://drive.google.com/file/d/1npdS9KtBXsRV9g5OzBObIOmBmXHI-RH7/view?usp=sharing",
-  "Indigenous Common Property Resource Institution From Across the World (English).pdf": "https://drive.google.com/file/d/1J2qOPXzQpEfNCoEYrEkLuygpfTRBcim6/view?usp=sharing",
-  "Jaivik pak sarakshan (Gujarati).pdf": "https://drive.google.com/file/d/15yC9ZOwRiKi6qqjYcA2T_FloTu5EF9WT/view?usp=sharing",
   "lok 1(1), 1996.pdf": "https://drive.google.com/file/d/1rl50vMWOKLTw9gya65YR7nARTDxEVP5A/view?usp=sharing",
   "lok 1(2).pdf": "https://drive.google.com/file/d/1z9LNHto4sIEfrXxcjTK6DYojEjciI0zp/view?usp=sharing",
   "lok 1(3).pdf": "https://drive.google.com/file/d/19h7ureaUWWHDJq6KfE_lxqjinKfknYA3/view?usp=sharing",
@@ -259,15 +272,6 @@ const PDF_DRIVE_LINKS = {
   "lok 9(3).pdf": "https://drive.google.com/file/d/1EKFWlfYcofNfaSYOu9YYgnT6JLnFkS9A/view?usp=sharing",
   "lok 9(4-5).pdf": "https://drive.google.com/file/d/143eQ6puup3Z9J4l_MKiFZ7jQS2talmF5/view?usp=sharing",
   "lok 9(6).pdf": "https://drive.google.com/file/d/1UPSLmtEZAjS_eQB3ekn1zeDYWES1oYrE/view?usp=sharing",
-  "Mapping Solutions (English).pdf": "https://drive.google.com/file/d/1LYI-rU3zAO2bmz_k18XF5INLzbovgtuW/view?usp=sharing",
-  "Naisargik Pashu chikitsa (Gujarati).pdf": "https://drive.google.com/file/d/1k0qiMF-KsdL6DSfV-f9zIsM7vHUrRRBT/view?usp=sharing",
-  "Naisargik Pashu chikitsa (Hindi).pdf": "https://drive.google.com/file/d/1pj9NCO6WgY0JYFSHh201M2RO6Bxzysmd/view?usp=sharing",
-  "Policies for an Inclusive Innovation Ecosystem (English).pdf": "https://drive.google.com/file/d/1wcbIpPrK2cEGTBeH4f7CuvLYs9vT8UiK/view?usp=sharing",
-  "Poshanmuly (Paramparagat Visrata Aahar Ane Dhanyonu Poshanmuly)_Final.pdf": "https://drive.google.com/file/d/10sq1eZS2Y5UBHLi1-KCbUhdYC2DQZ0DH/view?usp=sharing",
-  "Shatayu book.pdf": "https://drive.google.com/file/d/1IyOySKHeq48ytAld-KC7XAfkeEnS1b2O/view?usp=sharing",
-  "Shatayu Vandana (Gujarati).pdf": "https://drive.google.com/file/d/1AN7Ax2FUp5970V6mpwwBVUnIGLhb20ad/view?usp=sharing",
-  "Shatayu Vandana Hindi.pdf": "https://drive.google.com/file/d/1xzThb1KGieeN6e4pEbfutNVHmYNWgSlX/view?usp=sharing",
-  "Shodhyatra A pursuit of Authenticity.pdf": "https://drive.google.com/file/d/1b8GXDLTaGdSGjBQ395wvm8bdn4_FVouV/view?usp=sharing",
   "Suzbuz_10(1)_January_March_2006.pdf": "https://drive.google.com/file/d/1YvzC9K9CLRWH3UryX7XOJEAbQf0o7nLH/view?usp=sharing",
   "Suzbuz_10(2)_Aril_June_2006.pdf": "https://drive.google.com/file/d/1IcMWtQ7Orbx34AFZizZjaNBlC3Ct0vZo/view?usp=sharing",
   "suzbuz_10(3-4)_July_December_2006.pdf": "https://drive.google.com/file/d/1sE0LlGRkKOR-HarRoMXxpzOB2Xm3hgh3/view?usp=sharing",
@@ -320,24 +324,5 @@ const PDF_DRIVE_LINKS = {
   "Suzbuz_9(1)_January_March_2005.pdf": "https://drive.google.com/file/d/1_gTZVbgSRIUrcjJeUTE8bO5Nrr52Tqab/view?usp=sharing",
   "Suzbuz_9(2)_April_June_2005.pdf": "https://drive.google.com/file/d/1cKaJ5mqbn7u48SgZS_JL4irJLFRakvdn/view?usp=sharing",
   "Suzbuz_9(3)_July_September_2005.pdf": "https://drive.google.com/file/d/1iBdmFB-47wXgSRCQ06XzcDhxqGRVuXLO/view?usp=sharing",
-  "Suzbuz_9(4)_October_December_2005.pdf": "https://drive.google.com/file/d/1e5mG0InAhEmLTC7ltqDVIDnwgBjcJeqY/view?usp=sharing",
-  "Taki Rahevano Purusharth (GUJ).pdf": "https://drive.google.com/file/d/1SUEr8wkr0TNPvRKTmeeQby67j18YwtnJ/view?usp=sharing",
-  "Teachers as transformers.pdf": "https://drive.google.com/file/d/1pbA9p6W-kPuuS0_PkAxI2jBSO7Lpmljw/view?usp=sharing",
-  "The crucible of creativity English.pdf": "https://drive.google.com/file/d/1oZ7ENsp1XlxlVxPS2LxPMxUMuYi4b_JQ/view?usp=sharing",
-  "The Discerning Decades – HBN Editorial 1990-2012 English).pdf": "https://drive.google.com/file/d/1W6xSym4JWbreevRUuo5dZ83aceei19Io/view?usp=sharing",
-  "Vesarati Vangi no Khajano.pdf": "https://drive.google.com/file/d/1jSAO06coqlxc_SwgmdFIVXB-kS2h-vm5/view?usp=sharing",
-  "Vyanjano ki Virasat (Hindi).pdf": "https://drive.google.com/file/d/1ifT-zsNaYFBEWLbp6on6gxP_3o5sXVhW/view?usp=sharing",
-};
-
-export const GOOGLE_DRIVE_FOLDER = "https://drive.google.com/drive/folders/1DUOOxBuyYkrQI8owQe8RurP-jxTTpO7C?usp=sharing";
-
-/**
- * Resolve a local PDF path or filename to its Google Drive view link.
- * External URLs (http/https) are returned unchanged.
- */
-export function getGoogleDriveLink(pdfLink) {
-  if (!pdfLink) return null;
-  if (/^https?:\/\//i.test(pdfLink)) return pdfLink;
-  const filename = pdfLink.split('/').pop();
-  return PDF_DRIVE_LINKS[filename] ?? null;
+  "Suzbuz_9(4)_October_December_2005.pdf": "https://drive.google.com/file/d/1e5mG0InAhEmLTC7ltqDVIDnwgBjcJeqY/view?usp=sharing"
 }
