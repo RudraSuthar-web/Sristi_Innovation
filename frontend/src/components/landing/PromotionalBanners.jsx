@@ -32,7 +32,7 @@ const Banner = ({ text, bgImage, contactUrl, readMoreUrl }) => {
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-8">
           <Link 
             to={contactUrl} 
-            className="w-full sm:w-auto px-7 py-3 bg-[#82b440] text-white font-semibold rounded-2xl hover:bg-[#729e37] transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none text-center text-sm"
+            className="w-full sm:w-auto px-7 py-3 bg-emerald-600 text-white font-semibold rounded-2xl hover:bg-emerald-800 transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none text-center text-sm"
           >
             Contact Us
           </Link>
