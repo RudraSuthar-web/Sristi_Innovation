@@ -986,10 +986,10 @@ const OurStartups = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20">
         <div className="bg-white border border-gray-150 rounded-[2.5rem] p-8 md:p-10 shadow-lg flex flex-col md:flex-row justify-around items-stretch divide-y md:divide-y-0 md:divide-x divide-gray-150 gap-6 md:gap-0">
           {[
-            { label: "Startups Incubated", value: "100", suffix: "+", icon: Briefcase, color: "text-emerald-600" },
-            { label: "Patents Filed", value: "45", suffix: "+", icon: FileCheck, color: "text-teal-600" },
-            { label: "Funding Catalyzed", value: "10", prefix: "₹", suffix: "Cr+", icon: DollarSign, color: "text-green-600" },
-            { label: "Geographic Reach", value: "15", suffix: "+ States", icon: Compass, color: "text-blue-600" }
+            { label: "Startups Incubated", value: "70", suffix: "+", icon: Briefcase, color: "text-emerald-600" },
+            { label: "Patents Filed", value: "15", suffix: "+", icon: FileCheck, color: "text-teal-600" },
+            { label: "Funding", value: "2", prefix: "₹", suffix: "Cr+", icon: DollarSign, color: "text-green-600" },
+            { label: "Success Ratio", value: "80", suffix: "%", icon: Compass, color: "text-blue-600" }
           ].map((stat, idx) => {
             const Icon = stat.icon;
             return (
