@@ -30,6 +30,7 @@ import GrowthMeetGallery from './pages/GrowthMeetGallery';
 import ProductsAndTechnology from './pages/ProductsAndTechnology';
 import ProductDetail from './pages/ProductDetail';
 import Career from './pages/Career';
+import Inquiry from './pages/Inquiry';
 
 // Inline Scroll Restorer Component
 const ScrollToTop = () => {
@@ -91,6 +92,7 @@ function App() {
             <Route path="/growth-meet" element={<GrowthMeet />} />
             <Route path="/growth-meet-gallery" element={<GrowthMeetGallery />} />
             <Route path="/career" element={<Career />} />
+            <Route path="/inquiry" element={<Inquiry />} />
           </Routes>
         </main>
 
